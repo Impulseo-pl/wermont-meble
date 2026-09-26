@@ -175,10 +175,10 @@ def strona(path, title, desc, body, graph, R, preload=None, akt='', og=None):
     og_img = BASE + ('img/og.jpg' if not og else f'img/{og}-{WYM[og][2][-1]}.webp')
     menu = ''.join(f'<a href="{R}{p}"{" aria-current=" + chr(34) + "page" + chr(34) if akt == p else ""}>{n}</a>' for p, n in MENU)
     pre = ''
-    if preload:
-        k = preload[0]; sz = WYM[k][2]
-        pre = (f'<link rel="preload" as="image" href="{R}img/{k}-{sz[1] if len(sz) > 1 else sz[0]}.webp" '
-               f'imagesrcset="{", ".join(f"{R}img/{k}-{s}.webp {s}w" for s in sz)}" imagesizes="{preload[1]}" fetchpriority="high">')
+    for k, sizes, *media in ([preload] if preload and isinstance(preload[0], str) else (preload or [])):
+        sz = WYM[k][2]; md = f' media="{media[0]}"' if media else ''
+        pre += (f'<link rel="preload" as="image" href="{R}img/{k}-{sz[1] if len(sz) > 1 else sz[0]}.webp" '
+                f'imagesrcset="{", ".join(f"{R}img/{k}-{s}.webp {s}w" for s in sz)}" imagesizes="{sizes}"{md} fetchpriority="high">')
     g = {'@context': 'https://schema.org', '@graph': graph}
     return f'''<!doctype html>
 <html lang="pl">
@@ -252,15 +252,15 @@ WITRYNA_LD = {'@type': 'WebSite', '@id': BASE + '#witryna', 'url': BASE, 'name':
 SITEMAP = []
 
 def hero_sub(R, crumbs, h1, lead, foto, extra=''):
-    return f'''<section class="page-hero"><div class="wrap ph-grid"><div class="ph-text">{breadcrumbs(crumbs, R)}
+    return f'''<section class="ph"><div class="ph-text">{breadcrumbs(crumbs, R)}
 <h1>{e(h1)}</h1>{f'<p class="lead">{lead}</p>' if lead else ''}{extra}
 <div class="actions"><a class="btn btn-main" href="{R}kontakt/#zapytanie">Umów bezpłatny pomiar</a><a class="btn btn-sec" href="tel:{TEL}">{TEL_H}</a></div></div>
-<figure class="ph-photo">{img(foto, "(min-width: 1000px) 46vw, 100vw", R, eager=True)}</figure></div></section>'''
+<figure class="ph-photo">{img(foto, "(min-width: 1000px) 50vw, 100vw", R, eager=True)}</figure></section>'''
 
 def galeria(keys, R, tytul='Z naszych realizacji'):
     if not keys: return ''
     f = ''.join(f'<figure>{img(k, "(min-width: 1000px) 25vw, 50vw", R)}</figure>' for k in keys)
-    return f'<section class="sec sec-linen sec-tight"><div class="wrap"><div class="gal-head"><h2>{tytul}</h2><a href="{R}realizacje/">Wszystkie realizacje</a></div><div class="gallery">{f}</div></div></section>'
+    return f'<section class="sec sec-sand sec-tight"><div class="wrap"><div class="gal-head"><h2>{tytul}</h2><a href="{R}realizacje/">Wszystkie realizacje</a></div><div class="gallery">{f}</div></div></section>'
 
 def linki(tytul, items, R):
     if not items: return ''
@@ -288,7 +288,7 @@ for slug, nazwa, fotos in USLUGI:
           'image': BASE + f'img/{fotos[0]}-{WYM[fotos[0]][2][-1]}.webp'}]
     if d['faq']: g.append(faq_ld(d['faq'], path))
     akt = {'meble-kuchenne': 'meble-kuchenne/', 'garderoby-i-szafy': 'garderoby-i-szafy/', 'meble-lazienkowe': 'meble-lazienkowe/', 'fronty-meblowe': 'fronty-meblowe/'}.get(slug, '')
-    zapisz(path, strona(path, d['title'], d['desc'], b, g, R, (fotos[0], '(min-width: 1000px) 46vw, 100vw'), akt, og=fotos[0]))
+    zapisz(path, strona(path, d['title'], d['desc'], b, g, R, (fotos[0], '(min-width: 1000px) 50vw, 100vw'), akt, og=fotos[0]))
     SITEMAP.append((path, '0.8'))
 
 # ---------------------------------------------------------------- strony lokalne
@@ -315,7 +315,7 @@ for slug, nazwa, typ, m in LOKALNE:
          {'@type': 'Service', '@id': BASE + path + '#usluga', 'name': d['h1'], 'serviceType': nazwa, 'provider': {'@id': FIRMA},
           'areaServed': {'@type': 'City', 'name': mian}, 'url': BASE + path}]
     if d['faq']: g.append(faq_ld(d['faq'], path))
-    zapisz(path, strona(path, d['title'], d['desc'], b, g, R, (fotos[0], '(min-width: 1000px) 46vw, 100vw'), og=fotos[0]))
+    zapisz(path, strona(path, d['title'], d['desc'], b, g, R, (fotos[0], '(min-width: 1000px) 50vw, 100vw'), og=fotos[0]))
     SITEMAP.append((path, '0.6'))
 
 # ---------------------------------------------------------------- poradniki
@@ -373,16 +373,14 @@ for b in blk[i0 + 1:]:
     elif cur and b['t'] == 'p' and not cur['o']: cur['o'] = b['x']
     elif cur and b['t'] == 'ul': cur['l'] = b['items']
 ok_html = ''.join(f'<div class="spec-card"><h3>{e(o["n"])}</h3><p>{e(o["o"])}</p><ul>' + ''.join(f'<li>{e(x)}</li>' for x in o['l']) + '</ul></div>' for o in okucia)
-b = f'''<section class="page-hero"><div class="wrap ph-grid"><div class="ph-text">{breadcrumbs(crumbs, R)}<h1>{e(d['h1'])}</h1><p class="lead">{lead}</p>
-<div class="actions"><a class="btn btn-main" href="{R}kontakt/#zapytanie">Umów bezpłatny pomiar</a></div></div>
-<figure class="ph-photo">{img('pomiar', "(min-width: 1000px) 46vw, 100vw", R, eager=True)}</figure></div></section>
+b = hero_sub(R, crumbs, d['h1'], lead, 'pomiar') + f'''
 <section class="sec"><div class="wrap"><h2>Pięć etapów – od pomiaru do montażu</h2><ol class="steps steps-5">{et}</ol></div></section>
-<section class="sec sec-linen"><div class="wrap two"><div><h2>Detale, których nie widać na pierwszy rzut oka</h2>
+<section class="sec sec-sand"><div class="wrap two"><div><h2>Detale, których nie widać na pierwszy rzut oka</h2>
 <figure class="in-fig">{img('kuchnia-szuflady', "(min-width: 1000px) 40vw, 100vw", R)}</figure></div>
 <div class="prose">{''.join(f'<p>{b_["h"]}</p>' for b_ in std)}</div></div></section>
 <section class="sec"><div class="wrap"><h2>Okucia, które proponujemy w wycenach</h2><div class="spec-cards">{ok_html}</div></div></section>'''
 b += faq_html(d['faq']) + cta_band(R)
-zapisz(path, strona(path, d['title'], d['desc'], b, [webpage(path, d['title']), crumbs_ld(crumbs, path), faq_ld(d['faq'], path)], R, ('pomiar', '(min-width: 1000px) 46vw, 100vw'), path))
+zapisz(path, strona(path, d['title'], d['desc'], b, [webpage(path, d['title']), crumbs_ld(crumbs, path), faq_ld(d['faq'], path)], R, ('pomiar', '(min-width: 1000px) 50vw, 100vw'), path))
 SITEMAP.append((path, '0.7'))
 
 # ---------------------------------------------------------------- zakres dzialania
@@ -414,9 +412,9 @@ ul = next(bb['items'] for bb in d['blocks'] if bb['t'] == 'ul')
 lst = ''.join('<li><strong>' + e(x.split(':', 1)[0]) + '</strong>' + (e(':' + x.split(':', 1)[1]) if ':' in x else '') + '</li>' for x in ul)
 b = hero_sub(R, crumbs, d['h1'], ps[0], 'kuchnia-dab-okno-2')
 b += f'''<section class="sec"><div class="wrap two"><h2>Stolarstwo i technologia w jednym warsztacie</h2><div class="prose"><p>{ps[1]}</p><ul class="list">{lst}</ul></div></div></section>
-<section class="sec sec-dark"><div class="wrap"><h2>Co piszą klienci</h2><p class="rev-sub">Ocena 5,0 na 5 w Google na podstawie 41 opinii.</p><div class="reviews">{''.join(opinia(i) for i in range(3))}</div></div></section>'''
+<section class="sec on-dark"><div class="wrap"><h2>Co piszą klienci</h2><p class="rev-sub">Ocena 5,0 na 5 w Google na podstawie 41 opinii.</p><div class="reviews">{''.join(opinia(i) for i in range(3))}</div></div></section>'''
 b += galeria(['kuchnia-orzech-wyspa', 'szafa-wneka', 'lazienka-dab', 'kuchnia-granat'], R) + cta_band(R)
-zapisz(path, strona(path, d['title'], d['desc'], b, [webpage(path, d['title'], 'AboutPage'), crumbs_ld(crumbs, path)], R, ('kuchnia-dab-okno-2', '(min-width: 1000px) 46vw, 100vw'), path))
+zapisz(path, strona(path, d['title'], d['desc'], b, [webpage(path, d['title'], 'AboutPage'), crumbs_ld(crumbs, path)], R, ('kuchnia-dab-okno-2', '(min-width: 1000px) 50vw, 100vw'), path))
 SITEMAP.append((path, '0.5'))
 
 # ---------------------------------------------------------------- realizacje
@@ -485,57 +483,100 @@ oferta = [('meble-kuchenne', 'Kuchnie na wymiar', 'kuchnia-orzech-wyspa', 'Ukła
           ('garderoby-i-szafy', 'Szafy i garderoby', 'szafa-wneka', 'Szafy wnękowe, garderoby i zabudowy przedpokoju na całą wysokość ściany.'),
           ('meble-lazienkowe', 'Meble łazienkowe', 'lazienka-dab', 'Szafki podwieszane i podumywalkowe z obrzeżem ABS z trzech stron.'),
           ('szafy-w-skosie', 'Szafy w skosie', 'szafa-skos', 'Zabudowa poddasza docinana pod kąt dachu, bez martwych trójkątów.'),
-          ('fronty-meblowe', 'Fronty meblowe', 'kuchnia-granat-zabudowa', 'Lakier RAL i NCS, akryl, drewno i fornir – do nowych mebli i na wymianę.'),
-          ('projektowanie-mebli', 'Projekt z wizualizacją', 'wizualizacja', 'Projekt w PaletteCAD, poprawiany razem z Tobą, zanim cokolwiek trafi na maszynę.')]
+          ('fronty-meblowe', 'Fronty meblowe', 'kuchnia-granat-zabudowa', 'Lakier RAL i NCS, akryl, drewno i fornir – do nowych mebli i na wymianę.')]
 of_html = ''.join(f'<a class="off" href="{s}/">{img(k, "(min-width: 1000px) 30vw, (min-width: 600px) 45vw, 100vw", R)}<h3>{e(n)}</h3><p>{e(o)}</p></a>' for s, n, k, o in oferta)
 lok_k = ''.join(f'<li><a href="{s}/">{e(MIASTA[m][0])}</a></li>' for s, n, t2, m in LOKALNE if t2 == 'kuchnie')
 lok_m = ''.join(f'<li><a href="{s}/">{e(MIASTA[m][0])}</a></li>' for s, n, t2, m in LOKALNE if t2 == 'meble')
 wpisy = ''.join(f'<li><a href="{s}/">{e(T(s)["h1"])}</a></li>' for s in WPISY)
-b = f'''<section class="hero"><div class="wrap hero-grid"><div class="hero-text">
-<p class="hero-place">Stolarnia w Skorzewie pod Kościerzyną</p>
-<h1>Meble na wymiar od producenta – Kościerzyna, Trójmiasto, Pomorskie</h1>
+def rys():
+    """przekroj szafki dolnej: liczby z wermont.eu (korpus 730 mm, glebokosc 510 vs 560 mm, szuflady o 5 cm glebsze)"""
+    k = .42
+    def szafka(x0, gl, tytul, wermont):
+        w, h, n = gl * k, 730 * k, 100 * k
+        y0 = 40; fl = y0 + h + n
+        o = [f'<text x="{x0}" y="22" font-size="15" font-weight="600" fill="#1d1814">{tytul}</text>',
+             f'<line x1="{x0 - 8}" y1="{y0 - 6}" x2="{x0 - 8}" y2="{fl}" stroke="#766b5e" stroke-width="2"/>',
+             f'<rect x="{x0}" y="{y0}" width="{w:.1f}" height="{h:.1f}" fill="#fff" stroke="#1d1814" stroke-width="2"/>']
+        hh = (h - 14) / 3
+        for i in range(3):
+            yy = y0 + 10 + i * hh
+            dw = w - 22
+            o.append(f'<rect x="{x0 + 8}" y="{yy + 6:.1f}" width="{dw:.1f}" height="{hh - 14:.1f}" fill="#f3ece2" stroke="#9c8f7d" stroke-width="1.2"/>')
+            if wermont:
+                o.append(f'<rect x="{x0 + 8 + dw - 50 * k:.1f}" y="{yy + 6:.1f}" width="{50 * k:.1f}" height="{hh - 14:.1f}" fill="#9a5b2c" opacity=".85"/>')
+            o.append(f'<rect x="{x0 + w - 6:.1f}" y="{yy:.1f}" width="6" height="{hh - 2:.1f}" fill="{"#7c4620" if wermont else "#c9bda9"}"/>')
+        for lx in (x0 + 14, x0 + w - 20):
+            o.append(f'<rect x="{lx:.1f}" y="{y0 + h:.1f}" width="8" height="{n:.1f}" fill="{"#1d1814" if wermont else "#9c8f7d"}"/>')
+        o.append(f'<line x1="{x0 - 20}" y1="{fl:.1f}" x2="{x0 + w + 30:.1f}" y2="{fl:.1f}" stroke="#766b5e" stroke-width="1"/>')
+        dy = fl + 26
+        o.append(f'<line x1="{x0}" y1="{dy:.1f}" x2="{x0 + w:.1f}" y2="{dy:.1f}" stroke="#1d1814" stroke-width="1.2"/>'
+                 f'<line x1="{x0}" y1="{dy - 7:.1f}" x2="{x0}" y2="{dy + 7:.1f}" stroke="#1d1814"/><line x1="{x0 + w:.1f}" y1="{dy - 7:.1f}" x2="{x0 + w:.1f}" y2="{dy + 7:.1f}" stroke="#1d1814"/>'
+                 f'<text x="{x0 + w / 2:.1f}" y="{dy + 22:.1f}" text-anchor="middle" font-size="16" font-weight="600" fill="{"#9a5b2c" if wermont else "#1d1814"}">{gl} mm</text>')
+        if wermont:
+            hx = x0 + w + 18
+            o.append(f'<line x1="{hx:.1f}" y1="{y0}" x2="{hx:.1f}" y2="{y0 + h:.1f}" stroke="#1d1814" stroke-width="1.2"/>'
+                     f'<line x1="{hx - 6:.1f}" y1="{y0}" x2="{hx + 6:.1f}" y2="{y0}" stroke="#1d1814"/><line x1="{hx - 6:.1f}" y1="{y0 + h:.1f}" x2="{hx + 6:.1f}" y2="{y0 + h:.1f}" stroke="#1d1814"/>'
+                     f'<text x="{hx + 10:.1f}" y="{y0 + h / 2 + 5:.1f}" font-size="14" fill="#1d1814">730 mm</text>'
+                     f'<text x="{x0 + w + 12:.1f}" y="{fl - 8:.1f}" font-size="12.5" fill="#766b5e">nogi Häfele Axilo</text>')
+        return ''.join(o)
+    return ('<svg viewBox="0 0 660 470" role="img" aria-label="Przekrój szafki dolnej: typowa głębokość 510 mm, u Wermont 560 mm, szuflady o 5 cm głębsze">'
+            + szafka(30, 510, 'Typowa szafka dolna', False) + szafka(345, 560, 'Szafka Wermont', True)
+            + '<rect x="30" y="448" width="12" height="12" fill="#9a5b2c"/><text x="50" y="459" font-size="13.5" fill="#1d1814">dodatkowe 5 cm w każdej szufladzie</text></svg>')
+
+HW = WYM['kuchnia-dab-okno-2']
+b = f'''<section class="hero"><picture class="hero-img">
+<source media="(max-width: 760px)" srcset="{', '.join(f'img/kuchnia-orzech-wyspa-{x}.webp {x}w' for x in WYM['kuchnia-orzech-wyspa'][2])}" sizes="100vw">
+<img src="img/kuchnia-dab-okno-2-960.webp" srcset="{', '.join(f'img/kuchnia-dab-okno-2-{x}.webp {x}w' for x in HW[2])}" sizes="100vw" width="1600" height="{round(1600 * HW[1] / HW[0])}" alt="{e(ZDJ['kuchnia-dab-okno-2'][1])}" fetchpriority="high"></picture>
+<div class="wrap hero-in"><p class="eyebrow">Stolarnia w Skorzewie pod Kościerzyną</p>
+<h1>Meble na wymiar od producenta – <em>Kościerzyna, Trójmiasto, Pomorskie</em></h1>
 <p class="lead">Kuchnie, szafy, garderoby i meble łazienkowe. Mierzymy u Ciebie, projektujemy w PaletteCAD, tniemy na własnym CNC i montujemy naszą ekipą.</p>
-<div class="actions"><a class="btn btn-main" href="kontakt/#zapytanie">Umów bezpłatny pomiar</a><a class="btn btn-sec" href="tel:{TEL}">Zadzwoń: {TEL_H}</a></div>
-<p class="hero-note">Ocena 5,0 w Google z 41 opinii · cenę podajemy na pierwszym spotkaniu</p></div>
-<figure class="hero-photo">{img('kuchnia-orzech-wyspa', "(min-width: 1000px) 44vw, 100vw", R, eager=True)}</figure></div></section>
+<div class="actions"><a class="btn btn-main" href="kontakt/#zapytanie">Umów bezpłatny pomiar</a><a class="btn btn-sec" href="tel:{TEL}">Zadzwoń: {TEL_H}</a></div></div></section>
+<div class="facts-bar"><ul class="wrap">
+<li><b>Pomiar i wycena gratis</b>cenę podajemy na pierwszym spotkaniu</li>
+<li><b>Własna stolarnia</b>projekt, cięcie CNC i montaż u nas</li>
+<li><b>Blum i Peka</b>cichy domyk, pełny wysuw w standardzie</li>
+<li><b>5,0 w Google</b>na podstawie 41 opinii klientów</li></ul></div>
 
-<section class="sec"><div class="wrap two"><h2>Producent, nie pośrednik</h2><div class="intro-text">
-<p>Wermont to lokalna stolarnia ze Skorzewa. Nie sprzedajemy mebli z katalogu i nie oddajemy zleceń podwykonawcom. Pomiar robimy u Ciebie w domu, projekt rysujemy sami, płyty tniemy na własnej maszynie CNC, a meble montuje nasza ekipa.</p>
-<p>Dzięki temu rozmawiasz z ludźmi, którzy naprawdę robią Twoją kuchnię. Po umówieniu możesz przyjechać do warsztatu i obejrzeć próbki frontów, okucia i to, jak budujemy korpusy.</p>
+<section class="sec"><div class="wrap two"><div><p class="eyebrow">O stolarni</p><h2>Producent, <em>nie pośrednik</em></h2></div><div class="intro-text">
+<p>Wermont to lokalna stolarnia ze Skorzewa. Nie sprzedajemy mebli z katalogu i nie oddajemy zleceń podwykonawcom.</p>
+<p>Pomiar robimy u Ciebie w domu, projekt rysujemy sami, płyty tniemy na własnej maszynie CNC, a meble montuje nasza ekipa. Rozmawiasz z ludźmi, którzy naprawdę robią Twoją kuchnię. Po umówieniu możesz przyjechać do warsztatu i obejrzeć próbki frontów, okucia i to, jak budujemy korpusy.</p>
 <dl class="facts"><dt>Stolarnia</dt><dd>ul. Kościelna 18, 83-400 Skorzewo</dd><dt>Gdzie pracujemy</dt><dd>Kościerzyna i okolice, Kaszuby, Trójmiasto</dd>
-<dt>Pomiar i wycena</dt><dd>bezpłatnie, cenę podajemy na pierwszym spotkaniu</dd><dt>Biuro</dt><dd>poniedziałek–piątek, 8:00–18:00</dd></dl></div></div></section>
+<dt>Biuro</dt><dd>poniedziałek–piątek, 8:00–18:00</dd></dl></div></div></section>
 
-<section class="sec sec-linen" id="oferta"><div class="wrap"><div class="sec-head"><h2>Co robimy</h2><p>Każdy mebel powstaje pod konkretne pomieszczenie: pod skos, wnękę, grzejnik w złym miejscu albo ścianę, która nie trzyma pionu.</p></div>
+<section class="sec sec-sand" id="oferta"><div class="wrap"><div class="sec-head"><div><p class="eyebrow">Oferta</p><h2>Co robimy</h2></div><p>Każdy mebel powstaje pod konkretne pomieszczenie: pod skos, wnękę, grzejnik w złym miejscu albo ścianę, która nie trzyma pionu.</p></div>
 <div class="offers">{of_html}</div></div></section>
 
-<section class="sec"><div class="wrap"><div class="sec-head"><h2>Meble gotowe a meble od Wermont</h2><p>Dwie kuchnie mogą wyglądać tak samo w dniu montażu. Różnica wychodzi po kilku latach: w szufladach, w narożniku i w krawędziach przy zlewie.</p></div>
-{tab_html}</div></section>
+<section class="sec"><div class="wrap draw-grid"><figure class="draw">{rys()}<figcaption>Przekrój szafki dolnej w skali. Wymiary według standardu Wermont.</figcaption></figure>
+<div><p class="eyebrow">Czego nie widać</p><h2>Pięć centymetrów, które <em>czuć przy każdej szufladzie</em></h2>
+<p style="margin-top:20px">Typowa szafka dolna ma 510 mm głębokości. Nasze korpusy dolne mają 560 mm, więc każda szuflada jest o 5 cm głębsza.</p>
+<ul class="spec">{''.join(f'<li><span>{e(r[0])}</span><b>{e(r[2])}</b></li>' for r in tab[1:])}</ul></div></div></section>
 
-<section class="sec sec-linen"><div class="wrap project"><figure class="project-photo">{img('wizualizacja', "(min-width: 1000px) 40vw, 100vw", R)}<figcaption>Wizualizacja kuchni przygotowana przed produkcją</figcaption></figure>
-<div><h2>Kuchnię zobaczysz, zanim ją wytniemy</h2><p>Projekt robimy w programie PaletteCAD. Na wizualizacji widać układ szafek, kolory frontów, blat i oświetlenie, a nie tylko rysunek techniczny.</p>
+<section class="sec sec-sand"><div class="wrap project"><figure class="project-photo">{img('wizualizacja', "(min-width: 1000px) 40vw, 100vw", R)}<figcaption>Wizualizacja kuchni przygotowana przed produkcją</figcaption></figure>
+<div><p class="eyebrow">Projekt</p><h2>Kuchnię zobaczysz, <em>zanim ją wytniemy</em></h2><p style="margin-top:22px">Projekt robimy w programie PaletteCAD. Na wizualizacji widać układ szafek, kolory frontów, blat i oświetlenie, a nie tylko rysunek techniczny.</p>
 <p>Projekt poprawiamy razem z Tobą w trzech turach, aż wszystko się zgadza: wysokości, szuflady, miejsce na sprzęt i budżet. Do produkcji idzie dokładnie to, co zaakceptujesz.</p>
 <p><a href="proces-realizacji/">Zobacz pięć etapów realizacji</a></p></div></div></section>
 
-<section class="sec"><div class="wrap"><div class="gal-head"><h2>Nasze realizacje</h2><a href="realizacje/">Wszystkie realizacje</a></div>
-<div class="gallery">{''.join(f'<figure>{img(k, "(min-width: 1000px) 25vw, 50vw", R)}</figure>' for k in ['kuchnia-dab-okno', 'kuchnia-granat', 'kuchnia-cegla', 'lazienka-kamien', 'kuchnia-dab-b', 'szafa-szara', 'kuchnia-witryna', 'kuchnia-orzech-blat'])}</div></div></section>
+<section class="sec"><div class="wrap"><div class="gal-head"><div><p class="eyebrow">Realizacje</p><h2>Z naszych montaży</h2></div><a href="realizacje/">Wszystkie realizacje</a></div>
+<div class="mosaic">{''.join(f'<figure>{img(k, "(min-width: 1000px) 50vw, 100vw" if i == 0 else "(min-width: 1000px) 25vw, 50vw", R)}</figure>' for i, k in enumerate(['kuchnia-orzech-wyspa-2', 'kuchnia-granat', 'lazienka-kamien', 'kuchnia-cegla', 'szafa-wneka']))}</div></div></section>
 
-<section class="sec sec-dark"><div class="wrap"><h2>Co piszą klienci</h2><p class="rev-sub">Ocena 5,0 na 5 w Google na podstawie 41 opinii. Poniżej trzy z nich.</p><div class="reviews">{''.join(opinia(i) for i in range(3))}</div></div></section>
+<section class="sec on-dark"><div class="wrap"><p class="eyebrow">Opinie</p><h2>Co piszą klienci</h2><p class="rev-sub">Ocena 5,0 na 5 w Google na podstawie 41 opinii. Poniżej trzy z nich.</p><div class="reviews">{''.join(opinia(i) for i in range(3))}</div></div></section>
 
-<section class="sec"><div class="wrap"><h2>Jak pracujemy</h2><ol class="steps">
+<section class="sec"><div class="wrap"><p class="eyebrow">Współpraca</p><h2>Jak pracujemy</h2><ol class="steps">
 <li><h3>Pomiar i wycena</h3><p>Przyjeżdżamy, mierzymy dalmierzem laserowym i podajemy konkretną cenę już na tym spotkaniu. Bezpłatnie.</p></li>
 <li><h3>Projekt z wizualizacją</h3><p>Rysujemy meble w PaletteCAD i poprawiamy projekt razem z Tobą, zanim cokolwiek trafi na maszynę.</p></li>
 <li><h3>Produkcja w Skorzewie</h3><p>Meble powstają w naszej stolarni. Aktualny termin realizacji podajemy przy umawianiu pomiaru.</p></li>
 <li><h3>Montaż</h3><p>Montuje nasza ekipa. Regulujemy fronty i sprzątamy po sobie.</p></li></ol></div></section>
 
-<section class="sec sec-linen sec-tight"><div class="wrap loc-grid"><div><h2>Gdzie pracujemy</h2><p>Stolarnia jest w Skorzewie pod Kościerzyną. Na pomiary dojeżdżamy na Kaszuby, do Trójmiasta i dalej po Pomorzu. <a href="zakres-dzialania/">Pełny zakres działania</a></p></div>
+<section class="sec sec-sand sec-tight"><div class="wrap loc-grid"><div><h2>Gdzie pracujemy</h2><p style="margin-top:14px">Stolarnia jest w Skorzewie pod Kościerzyną. Na pomiary dojeżdżamy na Kaszuby, do Trójmiasta i dalej po Pomorzu. <a href="zakres-dzialania/">Pełny zakres działania</a></p></div>
 <div><h3>Kuchnie na wymiar</h3><ul class="chips">{lok_k}</ul></div><div><h3>Meble na wymiar</h3><ul class="chips">{lok_m}</ul></div></div></section>
 
 {faq_html(d['faq'], 'Najczęstsze pytania')}
 
-<section class="sec sec-tight"><div class="wrap"><nav class="rel" aria-label="Poradniki"><h2>Z poradników</h2><ul>{wpisy}</ul></nav></div></section>
+<section class="sec sec-tight" style="padding-top:0"><div class="wrap"><nav class="rel" aria-label="Poradniki"><h2>Z poradników</h2><ul>{wpisy}</ul></nav></div></section>
 
-<section class="sec sec-linen" id="kontakt"><div class="wrap">{kontakt_blok(R)}</div></section>'''
-zapisz('', strona('', d['title'], d['desc'], b, [FIRMA_LD, WITRYNA_LD, webpage('', d['title'], crumbs=False), faq_ld(d['faq'], '')], R, ('kuchnia-orzech-wyspa', '(min-width: 1000px) 44vw, 100vw')))
+<section class="sec sec-sand" id="kontakt"><div class="wrap">{kontakt_blok(R)}</div></section>'''
+zapisz('', strona('', d['title'], d['desc'], b, [FIRMA_LD, WITRYNA_LD, webpage('', d['title'], crumbs=False), faq_ld(d['faq'], '')], R,
+       [('kuchnia-orzech-wyspa', '100vw', '(max-width: 760px)'), ('kuchnia-dab-okno-2', '100vw', '(min-width: 761px)')]))
 SITEMAP.insert(0, ('', '1.0'))
 
 # ---------------------------------------------------------------- 404, sitemap, robots

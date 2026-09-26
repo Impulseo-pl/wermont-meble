@@ -48,10 +48,13 @@ Treści lokalne klienta są dobre (unikalne, 1300–1900 słów, 6-gramowe podob
 **technikę i szybkość**, nie „napiszemy wam SEO od nowa”. Część stron ma powtórzoną sekcję (np. Gdańsk: „Kuchnie w gdańskich
 kamienicach…” powtarza pierwszą) — do przeczyszczenia przy wdrożeniu.
 
-## Założenia wyglądu
+## Założenia wyglądu (v3, 26.09 wieczorem — Szymon: „zmień projekt wizualny”)
 
-Zwykła strona stolarni, bez ozdobników „AI”: ciepła biel i len, akcent orzechowy brąz (#7a4b27), ciemny grafit w opiniach
-i stopce. Nagłówki **Literata**, tekst **Karla**. Logo — oryginalny znak klienta. Zwracamy się na „Ty”, jak obecna strona.
+Ciemny orzech (#231a14) w nagłówku, stopce, opiniach i panelach hero podstron; jasny papier i piasek w treści; jeden akcent
+dębowy (#9a5b2c). Nagłówki **Newsreader** (z kursywą w akcencie), tekst **Hanken Grotesk**. Ostre krawędzie, bez zaokrągleń.
+Strona główna: zdjęcie realizacji na całą szerokość (na telefonie inny, pionowy kadr), pasek 4 faktów, oferta w układzie
+2 duże + 3 małe, **rysunek przekroju szafki 510 vs 560 mm w skali** (liczby z tabeli klienta), mozaika realizacji.
+Podstrony: ciemny panel z H1 + zdjęcie do krawędzi ekranu, ciemna karta „Bezpłatny pomiar” przyklejona z boku.
 
 ## Skąd są fakty (zero zmyślonych liczb)
 
