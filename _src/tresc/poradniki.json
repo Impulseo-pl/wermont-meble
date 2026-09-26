@@ -1,0 +1,64 @@
+{
+ "slug": "poradniki",
+ "title": "Poradniki - blog o meblach na wymiar | WERMONT",
+ "desc": "Poradniki WERMONT - praktyczna wiedza o meblach na wymiar prosto ze stolarni: kuchnie, fronty, zabudowy. Piszemy na podstawie realizacji z Kościerzyny i okolic.",
+ "h1": "",
+ "blocks": [
+  {
+   "t": "ul",
+   "items": [
+    "Kuchnia bezuchwytowa z listwą korytkową - czysty minimalizm w praktyce Gallery"
+   ]
+  },
+  {
+   "t": "h2",
+   "x": "Kuchnia bezuchwytowa z listwą korytkową - czysty minimalizm w praktyce"
+  },
+  {
+   "t": "p",
+   "x": "By Paweł Pobłocki|2026-07-12|Poradniki|",
+   "h": "By <a href=\"{R}author/pawel/\">Paweł Pobłocki</a>|2026-07-12|<a href=\"{R}category/poradniki/\">Poradniki</a>|"
+  },
+  {
+   "t": "p",
+   "x": "Bezuchwytowe fronty to jeden z najsilniejszych trendów w nowoczesnych kuchniach [...]",
+   "h": "Bezuchwytowe fronty to jeden z najsilniejszych trendów w nowoczesnych kuchniach [...]"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "Jak powstaje kuchnia na wymiar - krok po kroku, od pomiaru do montażu Gallery"
+   ]
+  },
+  {
+   "t": "h2",
+   "x": "Jak powstaje kuchnia na wymiar - krok po kroku, od pomiaru do montażu"
+  },
+  {
+   "t": "p",
+   "x": "Zamawiając kuchnię na wymiar, warto wiedzieć, co dokładnie Cię czeka [...]",
+   "h": "Zamawiając kuchnię na wymiar, warto wiedzieć, co dokładnie Cię czeka [...]"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "Fronty do kuchni: lakier, akryl czy drewno? Jak wybrać Gallery"
+   ]
+  },
+  {
+   "t": "h2",
+   "x": "Fronty do kuchni: lakier, akryl czy drewno? Jak wybrać"
+  },
+  {
+   "t": "p",
+   "x": "Front to element kuchni, na który patrzysz i którego dotykasz [...]",
+   "h": "Front to element kuchni, na który patrzysz i którego dotykasz [...]"
+  }
+ ],
+ "faq": [],
+ "imgs": [
+  "DSC_2820_SnapseedCopy-1.jpg",
+  "korytkowa-blat-1.jpg",
+  "pomiar-kuchni-dalmierzem-wermont.jpg"
+ ]
+}

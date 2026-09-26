@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://impulseo-pl.github.io/wermont-meble/</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://impulseo-pl.github.io/wermont-meble/polityka-prywatnosci/</loc><lastmod>2026-09-26</lastmod></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/</loc><lastmod>2026-09-26</lastmod><priority>1.0</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-kuchenne/</loc><lastmod>2026-09-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-kuchenne-z-plyty-mdf/</loc><lastmod>2026-09-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-kuchenne-drewniane/</loc><lastmod>2026-09-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/garderoby-i-szafy/</loc><lastmod>2026-09-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/szafy-w-skosie/</loc><lastmod>2026-09-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-lazienkowe/</loc><lastmod>2026-09-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/fronty-meblowe/</loc><lastmod>2026-09-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/projektowanie-mebli/</loc><lastmod>2026-09-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-na-wymiar-sikorzyno/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-na-wymiar-nowy-klincz/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-na-wymiar-nowa-karczma/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-na-wymiar-grabowo-koscierskie/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-na-wymiar-golubie/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-na-wymiar-lubiana/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-na-wymiar-wielki-klincz/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-na-wymiar-stezyca/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-na-wymiar-lipusz/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/kuchnie-na-wymiar-kartuzy/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/kuchnie-na-wymiar-zukowo/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-lazienkowe-na-wymiar-gdansk/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/szafy-i-garderoby-na-wymiar-gdynia/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/szafy-i-garderoby-na-wymiar-gdansk/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-na-wymiar-gdansk/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-na-wymiar-bytow/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/meble-na-wymiar-koscierzyna/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/kuchnie-na-wymiar-skorzewo/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/kuchnie-na-wymiar-bytow/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/kuchnie-na-wymiar-lebork/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/kuchnie-na-wymiar-koscierzyna/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/kuchnie-na-wymiar-sopot/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/kuchnie-na-wymiar-gdynia/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/kuchnie-na-wymiar-gdansk/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/kuchnia-bezuchwytowa-z-listwa-korytkowa-czysty-minimalizm-w-praktyce/</loc><lastmod>2026-09-26</lastmod><priority>0.5</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/fronty-do-kuchni-lakier-akryl-czy-drewno-jak-wybrac/</loc><lastmod>2026-09-26</lastmod><priority>0.5</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/jak-powstaje-kuchnia-na-wymiar-krok-po-kroku-od-pomiaru-do-montazu/</loc><lastmod>2026-09-26</lastmod><priority>0.5</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/category/poradniki/</loc><lastmod>2026-09-26</lastmod><priority>0.4</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/proces-realizacji/</loc><lastmod>2026-09-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/zakres-dzialania/</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/o-nas/</loc><lastmod>2026-09-26</lastmod><priority>0.5</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/realizacje/</loc><lastmod>2026-09-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/kontakt/</loc><lastmod>2026-09-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://impulseo-pl.github.io/wermont-meble/polityka-prywatnosci/</loc><lastmod>2026-09-26</lastmod><priority>0.1</priority></url>
 </urlset>

@@ -1,0 +1,67 @@
+{
+ "slug": "o-nas",
+ "title": "O nas - stolarnia mebli na wymiar ze Skorzewa | WERMONT",
+ "desc": "WERMONT - producent mebli na wymiar ze Skorzewa k. Kościerzyny. Kuchnie, szafy i zabudowy z dbałością o detal. Poznaj naszą pracownię. Tel. 732 139 879.",
+ "h1": "Nie jesteśmy fabryką. Jesteśmy inżynierami Twojej przestrzeni.",
+ "blocks": [
+  {
+   "t": "p",
+   "x": "Wermont to nie wielka fabryka mebli. Jesteśmy lokalną stolarnią ze Skorzewa, która powstała z pasji do detalu. Wierzymy, że meble na wymiar to inwestycja na lata, dlatego nie uznajemy drogi na skróty.",
+   "h": "Wermont to nie wielka fabryka mebli. Jesteśmy lokalną stolarnią ze Skorzewa, która powstała z pasji do detalu. Wierzymy, że meble na wymiar to inwestycja na lata, dlatego nie uznajemy drogi na skróty."
+  },
+  {
+   "t": "p",
+   "x": "Naszą siłą jest połączenie tradycyjnego stolarstwa z nowoczesną technologią. Każdy projekt realizujemy z aptekarską precyzją, dbając o to, by szafki domykały się bezszelestnie, a blaty były idealnie spasowane. Działamy na terenie województwa pomorskiego z naciskiem na sferę lokalną - Kościerzynę, Kaszuby, Trójmiasto - dzięki czemu masz pewność, że zawsze jesteśmy pod ręką.",
+   "h": "Naszą siłą jest połączenie tradycyjnego stolarstwa z nowoczesną technologią. Każdy projekt realizujemy z aptekarską precyzją, dbając o to, by szafki domykały się bezszelestnie, a blaty były idealnie spasowane. Działamy na terenie województwa pomorskiego z naciskiem na sferę lokalną - Kościerzynę, Kaszuby, Trójmiasto - dzięki czemu masz pewność, że zawsze jesteśmy pod ręką."
+  },
+  {
+   "t": "ul",
+   "items": [
+    "Dbałość o każdy detal: Perfekcyjne wykończenia to nasz standard, a nie opcja dodatkowa.",
+    "Projekt techniczny wraz z realistyczną wizualizacją: Bo każdy centymetr, każda wysokość półki czy szuflady ma znaczenie!",
+    "Tylko sprawdzone okucia: Pracujemy wyłącznie na systemach Blum i Peka (dożywotnia gwarancja jakości).",
+    "Czysty montaż: Szanujemy Twój dom - po montażu zostawiamy idealny porządek."
+   ]
+  },
+  {
+   "t": "p",
+   "x": "Proces pomiarów, projektowania i produkcji mebli na naszej stolarni",
+   "h": "Proces pomiarów, projektowania i produkcji mebli na naszej stolarni"
+  },
+  {
+   "t": "p",
+   "x": "Ocena 5,0/5 w Google na podstawie 41 opinii naszych klientów.",
+   "h": "Ocena <strong>5,0/5</strong> w Google na podstawie <strong>41 opinii</strong> naszych klientów."
+  },
+  {
+   "t": "h2",
+   "x": "Komponenty i systemy, z których korzystamy"
+  },
+  {
+   "t": "p",
+   "x": "Korzystamy z okuć i materiałów tych producentów. Znaki towarowe należą do ich właścicieli.",
+   "h": "Korzystamy z okuć i materiałów tych producentów. Znaki towarowe należą do ich właścicieli."
+  },
+  {
+   "t": "h2",
+   "x": "Porozmawiajmy o Twoich meblach"
+  },
+  {
+   "t": "p",
+   "x": "Przyjedziemy, zmierzymy i podamy konkretną cenę już na pierwszym spotkaniu.",
+   "h": "Przyjedziemy, zmierzymy i podamy konkretną cenę już na pierwszym spotkaniu."
+  },
+  {
+   "t": "p",
+   "x": "Zobacz nasze realizacje - a potem umów bezpłatny pomiar.",
+   "h": "Zobacz nasze realizacje - a potem umów bezpłatny pomiar."
+  },
+  {
+   "t": "p",
+   "x": "Zobacz, jak krok po kroku wygląda realizacja zamówienia - pięć etapów i dwie przejrzyste umowy.",
+   "h": "Zobacz, <a href=\"{R}proces-realizacji/\">jak krok po kroku wygląda realizacja zamówienia</a> - pięć etapów i dwie przejrzyste umowy."
+  }
+ ],
+ "faq": [],
+ "imgs": []
+}

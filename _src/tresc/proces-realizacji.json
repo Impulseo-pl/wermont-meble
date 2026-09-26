@@ -1,0 +1,257 @@
+{
+ "slug": "proces-realizacji",
+ "title": "Proces realizacji mebli na wymiar - 5 etapów | WERMONT",
+ "desc": "Od bezpłatnego pomiaru dalmierzem, przez projekt w PaletteCAD z trzema turami poprawek, po montaż własną ekipą - poznaj 5 etapów zamówienia mebli w WERMONT.",
+ "h1": "Proces realizacji mebli na wymiar",
+ "blocks": [
+  {
+   "t": "h2",
+   "x": "Przejrzysty proces - wiesz, co się dzieje na każdym etapie"
+  },
+  {
+   "t": "p",
+   "x": "Od pierwszego telefonu do gotowych mebli prowadzimy Cię przez pięć jasno opisanych etapów, opartych na przejrzystych umowach. Bez niespodzianek w cenie i bez „jakoś to będzie” - każdy krok ma swój zakres, termin i potwierdzenie.",
+   "h": "Od pierwszego telefonu do gotowych mebli prowadzimy Cię przez pięć jasno opisanych etapów, opartych na przejrzystych umowach. Bez niespodzianek w cenie i bez „jakoś to będzie” - każdy krok ma swój zakres, termin i potwierdzenie."
+  },
+  {
+   "t": "h2",
+   "x": "Pięć etapów - od pomiaru do montażu"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "1 Pomiar i wycena Bezpłatnie Bezpłatna konsultacja i konkretna cena już na pomiarze. Pomiar dalmierzem laserowym, inwentaryzacja na tablecie - od razu w formie, z której powstanie projekt.",
+    "2 Umowa projektowa Podpisujemy umowę na prace projektowe i rezerwujemy Twój termin realizacji w harmonogramie produkcji.",
+    "3 Projekt i wizualizacja 3 tury zmian W programie PaletteCAD opracowujemy fotorealistyczną wizualizację. Dopracowujemy układ, fronty i wyposażenie, aż zaakceptujesz koncepcję.",
+    "4 Umowa główna i materiały Podpisujemy umowę realizacyjną, przyjmujemy zadatek i zamawiamy materiały pod Twój projekt.",
+    "5 Realizacja i odbiór Meble powstają w naszej stolarni w Skorzewie - cięcie CNC z dokładnością 0,1 mm, obrzeża klejone także na elementach krzywoliniowych. Montuje nasza własna ekipa, na koniec wspólny odbiór prac."
+   ]
+  },
+  {
+   "t": "p",
+   "x": "Pierwszy etap nic nie kosztuje - umów bezpłatny pomiar.",
+   "h": "<strong>Pierwszy etap nic nie kosztuje - umów bezpłatny pomiar.</strong>"
+  },
+  {
+   "t": "h2",
+   "x": "Standard WERMONT - detale, których nie widać na pierwszy rzut oka"
+  },
+  {
+   "t": "p",
+   "x": "Obrzeże ABS z trzech stron. Standard rynkowy zostawia surową krawędź płyty tam, gdzie „nie widać”. U nas każdy bok korpusu jest oklejony z trzech stron - zamknięta struktura płyty nie chłonie wilgoci i nie pęcznieje w kuchennych warunkach.",
+   "h": "<strong>Obrzeże ABS z trzech stron.</strong> Standard rynkowy zostawia surową krawędź płyty tam, gdzie „nie widać”. U nas każdy bok korpusu jest oklejony z trzech stron - zamknięta struktura płyty nie chłonie wilgoci i nie pęcznieje w kuchennych warunkach."
+  },
+  {
+   "t": "p",
+   "x": "Więcej przestrzeni w cenie mebla. Szafki dolne mają u nas 560 mm głębokości - szuflady są o 5 cm głębsze niż w standardzie rynkowym. Korpusy dolne: 730 mm, a w systemach bezuchwytowych 790 mm. Szafki wiszące: 380 mm głębokości (rynkowo 300-320 mm) - mieszczą duże talerze obiadowe.",
+   "h": "<strong>Więcej przestrzeni w cenie mebla.</strong> Szafki dolne mają u nas 560 mm głębokości - szuflady są o 5 cm głębsze niż w standardzie rynkowym. Korpusy dolne: 730 mm, a w systemach bezuchwytowych 790 mm. Szafki wiszące: 380 mm głębokości (rynkowo 300-320 mm) - mieszczą duże talerze obiadowe."
+  },
+  {
+   "t": "p",
+   "x": "Standard rynkowy",
+   "h": "Standard rynkowy"
+  },
+  {
+   "t": "p",
+   "x": "WERMONT",
+   "h": "WERMONT"
+  },
+  {
+   "t": "p",
+   "x": "Fundament pod kamienny blat. Nogi Häfele Axilo o udźwigu do 150 kg na nogę i laserowe poziomowanie - pewna baza pod blaty granitowe.",
+   "h": "<strong>Fundament pod kamienny blat.</strong> Nogi Häfele Axilo o udźwigu do 150 kg na nogę i laserowe poziomowanie - pewna baza pod blaty granitowe."
+  },
+  {
+   "t": "h2",
+   "x": "Okucia, które proponujemy w wycenach"
+  },
+  {
+   "t": "p",
+   "x": "Klasyka",
+   "h": "Klasyka"
+  },
+  {
+   "t": "h3",
+   "x": "Blum TANDEMBOX antaro"
+  },
+  {
+   "t": "p",
+   "x": "Czysta forma z prostokątnym relingiem.",
+   "h": "Czysta forma z prostokątnym relingiem."
+  },
+  {
+   "t": "ul",
+   "items": [
+    "pełny wysuw",
+    "obciążenie 30 lub 65 kg",
+    "cichy domyk BLUMOTION"
+   ]
+  },
+  {
+   "t": "p",
+   "x": "Nowoczesność",
+   "h": "Nowoczesność"
+  },
+  {
+   "t": "h3",
+   "x": "Blum MERIVOBOX"
+  },
+  {
+   "t": "p",
+   "x": "Platforma z prowadnicą w kształcie litery L.",
+   "h": "Platforma z prowadnicą w kształcie litery L."
+  },
+  {
+   "t": "ul",
+   "items": [
+    "stabilność przy 40/70 kg",
+    "nagrodzona iF Design Award"
+   ]
+  },
+  {
+   "t": "p",
+   "x": "Narożniki",
+   "h": "Narożniki"
+  },
+  {
+   "t": "h3",
+   "x": "Peka Le Mans II"
+  },
+  {
+   "t": "p",
+   "x": "Półki „nerki” wyjeżdżają całkowicie na zewnątrz.",
+   "h": "Półki „nerki” wyjeżdżają całkowicie na zewnątrz."
+  },
+  {
+   "t": "ul",
+   "items": [
+    "pełny dostęp do garnków",
+    "25 kg na półkę, cichy domyk"
+   ]
+  },
+  {
+   "t": "h3",
+   "x": "Peka Magic Corner Comfort"
+  },
+  {
+   "t": "p",
+   "x": "Jeden ruch wyciąga przednie kosze i dosuwa tylne.",
+   "h": "Jeden ruch wyciąga przednie kosze i dosuwa tylne."
+  },
+  {
+   "t": "ul",
+   "items": [
+    "4 kosze, cichy domyk",
+    "maksimum pojemności"
+   ]
+  },
+  {
+   "t": "p",
+   "x": "Design premium",
+   "h": "Design premium"
+  },
+  {
+   "t": "h3",
+   "x": "Listwy Peka Schüco - system bezuchwytowy"
+  },
+  {
+   "t": "p",
+   "x": "Gładka tafla frontów bez wystających uchwytów - łączymy je z podwyższonymi korpusami 790 mm dla spójnej, nowoczesnej bryły.",
+   "h": "Gładka tafla frontów bez wystających uchwytów - łączymy je z podwyższonymi korpusami 790 mm dla spójnej, nowoczesnej bryły."
+  },
+  {
+   "t": "h2",
+   "x": "Komponenty i systemy, z których korzystamy"
+  },
+  {
+   "t": "p",
+   "x": "Korzystamy z okuć i materiałów tych producentów. Znaki towarowe należą do ich właścicieli.",
+   "h": "Korzystamy z okuć i materiałów tych producentów. Znaki towarowe należą do ich właścicieli."
+  },
+  {
+   "t": "p",
+   "x": "Zobacz też jak projektujemy oraz nasze realizacje.",
+   "h": "Zobacz też <a href=\"{R}projektowanie-mebli/\">jak projektujemy</a> oraz <a href=\"{R}realizacje/\">nasze realizacje</a>."
+  },
+  {
+   "t": "h3",
+   "x": "Opinie naszych klientów"
+  },
+  {
+   "t": "p",
+   "x": "„Efekt końcowy przerósł moje oczekiwania - terminowość, meble starannie wykonane i dopasowane co do milimetra.”",
+   "h": "„Efekt końcowy przerósł moje oczekiwania - terminowość, meble starannie wykonane i dopasowane co do milimetra.”"
+  },
+  {
+   "t": "p",
+   "x": "„Panowie świetnie doradzili, jak zrobić meble w naszej kuchni, aby jak najlepiej wykorzystać miejsce. Komunikacja była wspaniała.”",
+   "h": "„Panowie świetnie doradzili, jak zrobić meble w naszej kuchni, aby jak najlepiej wykorzystać miejsce. Komunikacja była wspaniała.”"
+  },
+  {
+   "t": "p",
+   "x": "„Szafa na wymiar wykonana solidnie, estetycznie i dokładnie tak, jak ustaliliśmy. Świetny kontakt i terminowość.”",
+   "h": "„Szafa na wymiar wykonana solidnie, estetycznie i dokładnie tak, jak ustaliliśmy. Świetny kontakt i terminowość.”"
+  },
+  {
+   "t": "p",
+   "x": "Zobacz wszystkie opinie w Google",
+   "h": "Zobacz wszystkie opinie w Google"
+  },
+  {
+   "t": "h3",
+   "x": "Najczęściej zadawane pytania"
+  },
+  {
+   "t": "p",
+   "x": "Trzy tury zmian w ramach prac projektowych - poprawiamy projekt, aż powiesz „to jest to”. Etap kończy akceptacja koncepcji.",
+   "h": "Trzy tury zmian w ramach prac projektowych - poprawiamy projekt, aż powiesz „to jest to”. Etap kończy akceptacja koncepcji."
+  },
+  {
+   "t": "h4",
+   "x": "Bezpłatny pomiar i konsultacja"
+  },
+  {
+   "t": "p",
+   "x": "Maszyny i doświadczenie ma wielu. Nas wyróżnia uwaga, jaką poświęcamy każdemu projektowi - od pierwszej rozmowy po ostatnią regulację frontów.",
+   "h": "<strong>Maszyny i doświadczenie ma wielu. Nas wyróżnia uwaga, jaką poświęcamy każdemu projektowi - od pierwszej rozmowy po ostatnią regulację frontów.</strong>"
+  },
+  {
+   "t": "h2",
+   "x": "SŁUCHAMY. DORADZAMY. DOTRZYMUJEMY TERMINÓW."
+  },
+  {
+   "t": "p",
+   "x": "Co o terminach piszą klienci: 5,0/5 w Google",
+   "h": "Co o terminach piszą klienci: 5,0/5 w Google"
+  },
+  {
+   "t": "p",
+   "x": "Wolisz porozmawiać? Zadzwoń: 732 139 879",
+   "h": "Wolisz porozmawiać? Zadzwoń: 732 139 879"
+  },
+  {
+   "t": "p",
+   "x": "Pięć etapów, dwie przejrzyste umowy i zero niespodzianek - tak wygląda zamawianie mebli u producenta. Zobacz nasze realizacje albo sprawdź kuchnie na wymiar. Ten sam proces opisujemy krok po kroku we wpisie jak powstaje kuchnia na wymiar.",
+   "h": "Pięć etapów, dwie przejrzyste umowy i zero niespodzianek - tak wygląda zamawianie mebli u producenta. Zobacz <a href=\"{R}realizacje/\">nasze realizacje</a> albo sprawdź <a href=\"{R}meble-kuchenne/\">kuchnie na wymiar</a>. Ten sam proces opisujemy krok po kroku we wpisie <a href=\"{R}jak-powstaje-kuchnia-na-wymiar-krok-po-kroku-od-pomiaru-do-montazu/\">jak powstaje kuchnia na wymiar</a>."
+  }
+ ],
+ "faq": [
+  {
+   "q": "Ile kosztuje pomiar i wycena?",
+   "a": "Nic - konsultacja, pomiar dalmierzem laserowym i wycena są bezpłatne i niezobowiązujące."
+  },
+  {
+   "q": "Ile tur poprawek obejmuje projekt?",
+   "a": "Trzy tury zmian w ramach prac projektowych - poprawiamy projekt, aż powiesz „to jest to\". Etap kończy akceptacja koncepcji."
+  },
+  {
+   "q": "Ile kosztuje kuchnia na wymiar?",
+   "a": "Nie ma jednej ceny - wszystko zależy od wielkości kuchni, materiałów na fronty i korpusy oraz klasy i liczby okuć: szuflad, systemów wysuwu, cargo. Konkretną cenę poznasz już na bezpłatnym pomiarze, a po jej akceptacji podpisujemy umowę projektową i przygotowujemy projekt 3D."
+  }
+ ],
+ "imgs": [
+  "head-kuchenne.jpg",
+  "pomiar-kuchni-dalmierzem-wermont.jpg",
+  "wizualizacja-projektu-kuchni-wermont.jpg"
+ ]
+}

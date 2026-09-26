@@ -1,0 +1,39 @@
+{
+ "slug": "kontakt",
+ "title": "Kontakt - Meble na wymiar Kościerzyna | WERMONT",
+ "desc": "Skontaktuj się z WERMONT - bezpłatny pomiar i wycena mebli u klienta. ul. Kościelna 18, Skorzewo (Kościerzyna). Tel. 732 139 879, biuro@wermont.eu",
+ "h1": "Skontaktuj się z nami",
+ "blocks": [
+  {
+   "t": "h2",
+   "x": "ul. Kościelna 18 83-400 Skorzewo"
+  },
+  {
+   "t": "p",
+   "x": "Godziny otwarcia: poniedziałek-piątek: 8:00-18:00 E-mail: biuro@wermont.eu",
+   "h": "Godziny otwarcia: <strong>poniedziałek-piątek: 8:00-18:00</strong> E-mail: biuro@wermont.eu"
+  },
+  {
+   "t": "p",
+   "x": "WERMONT - Meble Na Wymiar Kościelna 18, 83-400 Skorzewo",
+   "h": "<strong>WERMONT - Meble Na Wymiar</strong> Kościelna 18, 83-400 Skorzewo"
+  },
+  {
+   "t": "p",
+   "x": "Wyznacz trasę w Mapach Google",
+   "h": "Wyznacz trasę w Mapach Google"
+  },
+  {
+   "t": "p",
+   "x": "Przyjedziemy, zmierzymy i podamy konkretną cenę już na pierwszym spotkaniu - pomiar i wycena są bezpłatne.",
+   "h": "Przyjedziemy, zmierzymy i podamy konkretną cenę już na pierwszym spotkaniu - pomiar i wycena są bezpłatne."
+  },
+  {
+   "t": "p",
+   "x": "Zadowolony ze współpracy? Będzie nam miło, jeśli zostawisz opinię w Google - pomaga nam docierać do kolejnych klientów w Kościerzynie i okolicach.",
+   "h": "Zadowolony ze współpracy? Będzie nam miło, jeśli zostawisz <strong>opinię w Google</strong> - pomaga nam docierać do kolejnych klientów w Kościerzynie i okolicach."
+  }
+ ],
+ "faq": [],
+ "imgs": []
+}

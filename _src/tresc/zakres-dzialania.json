@@ -1,0 +1,104 @@
+{
+ "slug": "zakres-dzialania",
+ "title": "Meble na wymiar - Kościerzyna, Kaszuby, Trójmiasto | WERMONT",
+ "desc": "Meble na wymiar - Kościerzyna, Trójmiasto i całe Pomorskie. Kuchnie, szafy, garderoby i meble łazienkowe od producenta WERMONT. Bezpłatny pomiar i wycena.",
+ "h1": "",
+ "blocks": [
+  {
+   "t": "p",
+   "x": "Zakres działaniaPracownia WERMONT mieści się w Skorzewie koło Kościerzyny, a meble projektujemy, wykonujemy i montujemy na terenie całego województwa pomorskiego. Jesteśmy producentem, nie pośrednikiem. Bezpłatny pomiar i wycena obowiązują w każdej z poniższych lokalizacji.",
+   "h": "Zakres działaniaPracownia WERMONT mieści się w Skorzewie koło Kościerzyny, a meble projektujemy, wykonujemy i montujemy na terenie całego województwa pomorskiego. Jesteśmy producentem, nie pośrednikiem. Bezpłatny pomiar i wycena obowiązują w każdej z poniższych lokalizacji."
+  },
+  {
+   "t": "h2",
+   "x": "Kuchnie na wymiar"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "Gdańsk",
+    "Gdynia",
+    "Sopot",
+    "Kościerzyna",
+    "Bytów",
+    "Skorzewo",
+    "Lębork"
+   ]
+  },
+  {
+   "t": "h2",
+   "x": "Meble na wymiar - szafy, garderoby, łazienki"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "Gdańsk",
+    "Bytów",
+    "Kościerzyna"
+   ]
+  },
+  {
+   "t": "p",
+   "x": "Twojej miejscowości nie ma na liście? Napisz do nas lub zadzwoń: 732 139 879 - dojeżdżamy na pomiary na całym Pomorzu.",
+   "h": "Twojej miejscowości nie ma na liście? Napisz do nas lub zadzwoń: 732 139 879 - dojeżdżamy na pomiary na całym Pomorzu."
+  },
+  {
+   "t": "h2",
+   "x": "Gdzie pracujemy - Pomorze na wymiar"
+  },
+  {
+   "t": "p",
+   "x": "Nasza stolarnia mieści się w Skorzewie pod Kościerzyną, a meble projektujemy, wykonujemy i montujemy na terenie całego Pomorza. Najwięcej realizacji prowadzimy w Kościerzynie i okolicy oraz w Trójmieście, ale dojeżdżamy też do mniejszych miejscowości w regionie. Pomiar u klienta jest bezpłatny, a montaż prowadzi nasza własna ekipa - nie pośredniczymy, meble wykonujemy od początku do końca we własnym warsztacie.",
+   "h": "Nasza stolarnia mieści się w Skorzewie pod Kościerzyną, a meble projektujemy, wykonujemy i montujemy na terenie całego Pomorza. Najwięcej realizacji prowadzimy w Kościerzynie i okolicy oraz w Trójmieście, ale dojeżdżamy też do mniejszych miejscowości w regionie. Pomiar u klienta jest bezpłatny, a montaż prowadzi nasza własna ekipa - nie pośredniczymy, meble wykonujemy od początku do końca we własnym warsztacie."
+  },
+  {
+   "t": "h3",
+   "x": "Kościerzyna i okolice"
+  },
+  {
+   "t": "p",
+   "x": "To nasz teren macierzysty. Robimy tu kuchnie na wymiar w Kościerzynie i meble do całego domu, a także kuchnie w Skorzewie, gdzie znajduje się nasza pracownia. Najkrótszy dojazd i możliwość obejrzenia warsztatu na miejscu. Regularnie meblujemy też okoliczne miejscowości: Lipusz, Stężycę, Wielki Klincz, Łubianę, Gołubie, Grabowo Kościerskie, Nową Karczmę, Nowy Klincz i Sikorzyno.",
+   "h": "To nasz teren macierzysty. Robimy tu <a href=\"{R}kuchnie-na-wymiar-koscierzyna/\">kuchnie na wymiar w Kościerzynie</a> i <a href=\"{R}meble-na-wymiar-koscierzyna/\">meble do całego domu</a>, a także kuchnie w <a href=\"{R}kuchnie-na-wymiar-skorzewo/\">Skorzewie</a>, gdzie znajduje się nasza pracownia. Najkrótszy dojazd i możliwość obejrzenia warsztatu na miejscu. Regularnie meblujemy też okoliczne miejscowości: <a href=\"{R}meble-na-wymiar-lipusz/\">Lipusz</a>, <a href=\"{R}meble-na-wymiar-stezyca/\">Stężycę</a>, <a href=\"{R}meble-na-wymiar-wielki-klincz/\">Wielki Klincz</a>, <a href=\"{R}meble-na-wymiar-lubiana/\">Łubianę</a>, <a href=\"{R}meble-na-wymiar-golubie/\">Gołubie</a>, <a href=\"{R}meble-na-wymiar-grabowo-koscierskie/\">Grabowo Kościerskie</a>, <a href=\"{R}meble-na-wymiar-nowa-karczma/\">Nową Karczmę</a>, <a href=\"{R}meble-na-wymiar-nowy-klincz/\">Nowy Klincz</a> i <a href=\"{R}meble-na-wymiar-sikorzyno/\">Sikorzyno</a>."
+  },
+  {
+   "t": "h3",
+   "x": "Trójmiasto: Gdańsk, Gdynia, Sopot"
+  },
+  {
+   "t": "p",
+   "x": "W aglomeracji realizujemy kuchnie i meble na wymiar w Gdańsku, szafy i garderoby, a także kuchnie w Gdyni i Sopocie. Znamy specyfikę kamienic, apartamentów i mieszkań nadmorskich. W Gdańsku prowadzimy też zabudowę łazienek, a w Gdyni szafy i garderoby.",
+   "h": "W aglomeracji realizujemy <a href=\"{R}kuchnie-na-wymiar-gdansk/\">kuchnie</a> i <a href=\"{R}meble-na-wymiar-gdansk/\">meble na wymiar w Gdańsku</a>, <a href=\"{R}szafy-i-garderoby-na-wymiar-gdansk/\">szafy i garderoby</a>, a także <a href=\"{R}kuchnie-na-wymiar-gdynia/\">kuchnie w Gdyni</a> i <a href=\"{R}kuchnie-na-wymiar-sopot/\">Sopocie</a>. Znamy specyfikę kamienic, apartamentów i mieszkań nadmorskich. W Gdańsku prowadzimy też <a href=\"{R}meble-lazienkowe-na-wymiar-gdansk/\">zabudowę łazienek</a>, a w Gdyni <a href=\"{R}szafy-i-garderoby-na-wymiar-gdynia/\">szafy i garderoby</a>."
+  },
+  {
+   "t": "h3",
+   "x": "Kaszuby i reszta Pomorza"
+  },
+  {
+   "t": "p",
+   "x": "Dojeżdżamy również do Bytowa, Lęborka i innych miejscowości w regionie. Jeśli Twojej miejscowości nie ma na liście, napisz lub zadzwoń - ustalimy, czy dojazd wchodzi w grę. Robimy też kuchnie na wymiar w Kartuzach - stolicy Kaszub tuż obok - oraz w Żukowie u bram Trójmiasta.",
+   "h": "Dojeżdżamy również do <a href=\"{R}kuchnie-na-wymiar-bytow/\">Bytowa</a>, <a href=\"{R}kuchnie-na-wymiar-lebork/\">Lęborka</a> i innych miejscowości w regionie. Jeśli Twojej miejscowości nie ma na liście, napisz lub zadzwoń - ustalimy, czy dojazd wchodzi w grę. Robimy też <a href=\"{R}kuchnie-na-wymiar-kartuzy/\">kuchnie na wymiar w Kartuzach</a> - stolicy Kaszub tuż obok - oraz w <a href=\"{R}kuchnie-na-wymiar-zukowo/\">Żukowie</a> u bram Trójmiasta."
+  },
+  {
+   "t": "p",
+   "x": "Cokolwiek planujesz - kuchnię, szafę lub garderobę, zabudowę łazienki czy same fronty - zaczynamy od bezpłatnego pomiaru, a potem powstaje projekt z wizualizacją. Zobacz nasze realizacje z całego regionu.",
+   "h": "Cokolwiek planujesz - <a href=\"{R}meble-kuchenne/\">kuchnię</a>, <a href=\"{R}garderoby-i-szafy/\">szafę lub garderobę</a>, <a href=\"{R}meble-lazienkowe/\">zabudowę łazienki</a> czy same <a href=\"{R}fronty-meblowe/\">fronty</a> - zaczynamy od bezpłatnego pomiaru, a potem powstaje <a href=\"{R}projektowanie-mebli/\">projekt z wizualizacją</a>. Zobacz <a href=\"{R}realizacje/\">nasze realizacje</a> z całego regionu."
+  },
+  {
+   "t": "p",
+   "x": "Przyjedziemy, zmierzymy i podamy konkretną cenę już na pierwszym spotkaniu.",
+   "h": "Przyjedziemy, zmierzymy i podamy konkretną cenę już na pierwszym spotkaniu."
+  },
+  {
+   "t": "p",
+   "x": "Zobacz nasze realizacje z całego Pomorza.",
+   "h": "Zobacz nasze realizacje z całego Pomorza."
+  },
+  {
+   "t": "p",
+   "x": "Niezależnie od miejscowości proces jest ten sam - sprawdź 5 etapów realizacji zamówienia.",
+   "h": "Niezależnie od miejscowości proces jest ten sam - sprawdź <a href=\"{R}proces-realizacji/\">5 etapów realizacji zamówienia</a>."
+  }
+ ],
+ "faq": [],
+ "imgs": []
+}

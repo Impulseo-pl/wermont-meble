@@ -7,6 +7,10 @@
     menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='Menu';}});
   }
 
+  /* mapa dopiero po kliknieciu - bez zewnetrznych zapytan przy wejsciu na strone */
+  var mb=document.querySelector('.map-btn');
+  if(mb)mb.addEventListener('click',function(){var m=mb.parentNode,f=document.createElement('iframe');f.title='Mapa dojazdu – Wermont, Skorzewo';f.src=m.getAttribute('data-src');m.replaceChild(f,mb);});
+
   function phoneOk(v){return v.replace(/\D/g,'').length>=9;}
 
   /* zapytanie o meble */

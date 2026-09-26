@@ -6,34 +6,50 @@ Obecna strona: https://wermont.eu/ (WordPress/Avada, zrobiona przez Red Baron Su
 
 Podgląd lokalny: `python -m http.server 8123`. Sprawdzanie opublikowanego dema przez nas — **zawsze z `?team=1`**.
 
-## Założenia
+## v2 (26.09.2026) — pełna struktura strony klienta, pod techniczne SEO
 
-Zwykła strona stolarni, bez ozdobników „AI”: ciepła biel i len, akcent orzechowy brąz (#7a4b27) wzięty z dekorów
-na zdjęciach realizacji, ciemny grafit tylko w opiniach i stopce. Nagłówki **Literata**, tekst **Karla** (inne niż w
-mk-bau i w pozostałych demach meblowych: Lora/Manrope, Cormorant/Inter). Logo w nagłówku — oryginalny znak klienta z wermont.eu.
+Klient ma już rozbudowaną stronę pod SEO (WordPress/Avada + Yoast, 43 adresy, w tym 24 lokalne landingi i 3 wpisy).
+Dlatego v2 to **nie wizytówka, tylko przeniesienie całej struktury**: każdy z 43 adresów wermont.eu istnieje w demie
+pod tą samą ścieżką (`/kuchnie-na-wymiar-gdansk/`, `/category/poradniki/` itd.), z treścią klienta (tytuły, opisy,
+H1, akapity z linkami wewnętrznymi, FAQ), w nowym, lekkim szablonie. **Przy wdrożeniu nie trzeba ani jednego przekierowania 301.**
 
-**Wszystkie zdjęcia to realizacje Wermont** z ich obecnej strony (zero stocków) — lista w `zrodla-zdjec.html` i `_src/zrodla.json`.
+Generator: `python _src/build.py` (demo) albo `BASE=https://wermont.eu/ python _src/build.py` (produkcja: zdejmuje noindex,
+przestawia canonical/og/JSON-LD/sitemap). Kontrola: `python _src/sprawdz.py` (H1, canonical, duplikaty title/description,
+JSON-LD, martwe linki, alt/wymiary obrazów, pokrycie adresów starej strony). Treści: `_src/tresc/*.json`
+(wyciągnięte z wermont.eu przez `_src/extract.py`), zdjęcia: `_src/zdjecia.py` (+ `zdjecia_webp.py`).
 
-Układ: hero (tekst + szerokie zdjęcie) → „Producent, nie pośrednik” z faktami → oferta w 4 naprzemiennych rzędach
-(kuchnie, szafy, łazienki, fronty) → „Czego nie widać” (parametry konstrukcji, które klient sam podaje) → projekt
-w PaletteCAD → galeria 8 realizacji → 3 opinie z Google → 4 kroki współpracy → kontakt z formularzem i mapą.
-Zwracamy się na „Ty”, tak jak robi to obecna strona klienta.
+### Co jest technicznie lepsze niż na obecnej stronie
+- CSS inline (0 blokujących plików), 1 skrypt (`defer`), fonty lokalne z preloadem, zero zewnętrznych skryptów przy wejściu
+  (mapa OSM ładuje się dopiero po kliknięciu, bez GTM/Trustindex/jQuery).
+- Obrazy WebP w 3 rozmiarach z `srcset`/`sizes`, `width`/`height` (CLS = 0), LCP z `preload` + `fetchpriority`.
+- JSON-LD spięty w jeden graf przez `@id`: `HomeAndConstructionBusiness` (NAP, NIP, geo, godziny, 18 miejscowości),
+  `WebSite`, `WebPage`/`AboutPage`/`ContactPage`/`CollectionPage`, `Service` na każdej usłudze i stronie lokalnej
+  (z `areaServed` = konkretne miasto), `BreadcrumbList` wszędzie, `FAQPage` tam gdzie klient ma FAQ, `BlogPosting` z datami.
+  Celowo bez `aggregateRating` (Google nie pokazuje gwiazdek z opinii o sobie na własnej stronie).
+- Widoczne okruszki, sticky karta „Bezpłatny pomiar" na podstronach, linkowanie wewnętrzne: stopka z wszystkimi 24 stronami
+  lokalnymi, bloki „W tej okolicy robimy też" i „Gdzie robimy…" (obecnie „Zobacz również" ma 3 linki).
+- Zdjęcia: 56 realizacji klienta, nazwy plików opisowe (`kuchnia-orzech-wyspa-960.webp` zamiast `DSC_4080-scaled.jpg`), alt dla każdego.
+  Stocki i rendery z obecnej strony (proj-1, kuchnia-mdf, lp1…) pominięte.
 
-## Techniczne SEO
+### Pomiar (ten sam dla obu, `_src/perf.py`: Playwright, telefon 412 px, 150 ms RTT / 1,6 Mb/s, CPU ×4, mediana z 3)
+| | LCP | CLS | transfer | zapytania | zewn. domeny |
+|---|---|---|---|---|---|
+| wermont.eu — strona główna | 4,2 s | 0,19 | 1274 KB | 61 | 4 (GTM, GA, Trustindex, googleusercontent) |
+| wermont.eu — /kuchnie-na-wymiar-gdansk/ | 6,9 s | 0,26 | 799 KB | 26 | 1 |
+| demo v2 — patrz niżej (GitHub Pages) | | | | | |
 
-- `title`, `description`, `canonical`, Open Graph (JPG 1200×630: `img/og.jpg`).
-- JSON-LD: `HomeAndConstructionBusiness` (NAP, NIP, geo, godziny pn–pt 8–18, obszar, katalog usług, sameAs FB/IG) + `WebSite`.
-  Celowo **bez `aggregateRating`** — Google nie pokazuje gwiazdek z opinii o sobie samym na własnej stronie.
-- Jeden `h1`, poprawna hierarchia, link „przejdź do treści”, `lang="pl"`.
-- Fonty lokalnie (woff2, latin + latin-ext, preload), obraz LCP z `preload` + `fetchpriority="high"`, `srcset`,
-  `width`/`height` przy obrazkach, `loading="lazy"` poniżej pierwszego ekranu, bez ekranu ładowania.
-- `sitemap.xml`, `robots.txt`, `404.html`, `favicon.svg`, `apple-touch-icon.png`, `site.webmanifest`, polityka prywatności.
-- Menu na telefonie, dolny pasek „Zadzwoń / Umów pomiar”.
-- Licznik otwarć demo (`demo_views`) — ostatnie IIFE w `assets/app.js`, skopiowane 1:1 z mk-bau.
-- **DEMO ma `noindex`**. Przy wdrożeniu: usunąć `noindex`, podmienić `https://impulseo-pl.github.io/wermont-meble/`
-  na `https://wermont.eu/` (canonical, og, JSON-LD, sitemap, robots), w 404.html ścieżki `/wermont-meble/` → `/`,
-  podpiąć formularz, zachować przekierowania 301 ze starych adresów WordPressa (`/meble-kuchenne/`, `/kontakt/`,
-  `/meble-na-wymiar-koscierzyna/` itd. — obecna strona ma sporo podstron lokalnych, nie wolno ich zgubić).
+Progi Google (Core Web Vitals): LCP dobre ≤ 2,5 s, słabe > 4 s; CLS dobre ≤ 0,1, słabe > 0,25.
+Strona klienta ma też długie „białe dziury” na zrzutach — elementy Avady animowane przy przewijaniu.
+
+### Uczciwie o treści klienta
+Treści lokalne klienta są dobre (unikalne, 1300–1900 słów, 6-gramowe podobieństwo między stronami ~10%) — więc sprzedajemy
+**technikę i szybkość**, nie „napiszemy wam SEO od nowa”. Część stron ma powtórzoną sekcję (np. Gdańsk: „Kuchnie w gdańskich
+kamienicach…” powtarza pierwszą) — do przeczyszczenia przy wdrożeniu.
+
+## Założenia wyglądu
+
+Zwykła strona stolarni, bez ozdobników „AI”: ciepła biel i len, akcent orzechowy brąz (#7a4b27), ciemny grafit w opiniach
+i stopce. Nagłówki **Literata**, tekst **Karla**. Logo — oryginalny znak klienta. Zwracamy się na „Ty”, jak obecna strona.
 
 ## Skąd są fakty (zero zmyślonych liczb)
 
