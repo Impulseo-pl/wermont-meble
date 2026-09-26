@@ -36,9 +36,11 @@ JSON-LD, martwe linki, alt/wymiary obrazów, pokrycie adresów starej strony). T
 |---|---|---|---|---|---|
 | wermont.eu — strona główna | 4,2 s | 0,19 | 1274 KB | 61 | 4 (GTM, GA, Trustindex, googleusercontent) |
 | wermont.eu — /kuchnie-na-wymiar-gdansk/ | 6,9 s | 0,26 | 799 KB | 26 | 1 |
-| demo v2 — patrz niżej (GitHub Pages) | | | | | |
+| **demo v2 — strona główna** (GitHub Pages) | **1,0 s** | **0,00** | 342 KB | 14 | 0 |
+| **demo v2 — /kuchnie-na-wymiar-gdansk/** | **1,1 s** | **0,00** | 260 KB | 12 | 0 |
 
 Progi Google (Core Web Vitals): LCP dobre ≤ 2,5 s, słabe > 4 s; CLS dobre ≤ 0,1, słabe > 0,25.
+Uwaga: w Chrome preload fontu opóźniał pierwsze malowanie (FCP 3,5 s), dlatego fonty idą bez preloadu, a Karla z `font-display: optional`.
 Strona klienta ma też długie „białe dziury” na zrzutach — elementy Avady animowane przy przewijaniu.
 
 ### Uczciwie o treści klienta
