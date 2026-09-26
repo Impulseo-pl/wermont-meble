@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://impulseo-pl.github.io/wermont-meble/sitemap.xml
