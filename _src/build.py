@@ -201,7 +201,6 @@ def strona(path, title, desc, body, graph, R, preload=None, akt='', og=None):
 <link rel="icon" href="{R}favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{R}apple-touch-icon.png">
 <link rel="manifest" href="{R}site.webmanifest">
-<link rel="preload" href="{R}fonts/literata-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 {pre}
 <style>{CSS.replace('url(../fonts/', 'url(' + R + 'fonts/')}</style>
 {ld(g)}
